@@ -49,7 +49,7 @@
 						<small>
 							Andraz Vrhovec
 							<br>
-							<a href="https://twitter.com/overlord_tm">@overlord_tm</a>
+							Webcamp Ljubljana, April 2014
 						</small>
 					</p>
 				</section>
@@ -316,7 +316,7 @@
 
 					<section>
 						<h2>otherwise</h2>
-						Go to <a href="http://cefbuilds.com/" target="_blank">CEF3 builds</a> and download packages for your target platforms. Basically all what you need is in cef_simple project inside package. Youst tweak it to your needs and compile it. You might need Visual Studio or XCode :)
+						Go to <a href="http://cefbuilds.com/" target="_blank">CEF3 builds</a> and download packages for your target platforms. Basically all what you need is in cef_simple project inside package. Just tweak it to your needs and compile it. You might need Visual Studio or XCode :)
 					</section>
 				</section>
 
@@ -354,7 +354,7 @@
 							To implement platform specific functions. 
 						</p>
 						<p><small>
-							You can suffix file with _windows.go and it will be build only on Windows. Same goes for _darwin.go and _linux.go. More about <a href="http://golang.org/pkg/go/build/" target="_blank">that</a>
+							You can suffix file with _windows.go and it will be build only on Windows. Same goes for _darwin.go and _linux.go. More about <a href="http://golang.org/pkg/go/build/" target="_blank">that</a>.
 						</small></p>
 					</section>
 
@@ -366,6 +366,13 @@
 						<pre><code>
 							go run -ldflags "-X main.version 0.0.1" main.go
 						</code></pre>
+					</section>
+
+					<section>
+						<h2>Mind the security</h2>
+						<p>
+							Your app will probably have access to resources that a normal web app does not have. Make sure REST API calls that can do damage to the system are done in safe manner. Like <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29" target="_blank">CSRF</a> for example.
+						</p>
 					</section>
 
 				</section>
